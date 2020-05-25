@@ -16,3 +16,21 @@ do not forget to run it as root to check after the system reboots if docker got 
 $ docker run hello-world
 Hello from Docker!
 ```
+
+# Steps for kali
+
+just run this step by step or all at once and itll be good
+```
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+xenial \
+stable"
+
+sudo apt-get update
+sudo apt-get install docker-ce
+sudo docker run hello-world
+```
